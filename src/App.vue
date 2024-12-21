@@ -1,50 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <Contador
-    encabezado="Primera"
-    :valor="calcular(1, 3)"
-    :esVerdad="muestra1"
-    :valor2="2"
-  />
-  <hr />
-  <Contador
-    encabezado="Segundo"
-    v-bind:valor="calcular(8, 2)"
-    :esVerdad="muestra2"
-  />
-  
-  <hr />  
-  <button @click="cambiar(1)">Cambiar Primero</button>
-  <button @click="cambiar(2)">Cambiar Segundo</button>
+  <JuegoPage/>
 </template>
 
 <script>
-import Contador from "./components/Contador.vue";
+import JuegoPage from "./pages/JuegoPage.vue";
+
 export default {
   name: "App",
   components: {
-    Contador,
-  },
-
-  data() {
-    return {
-      muestra1: true,
-      muestra2: false,
-    };
-  },
-
-  methods: {
-    calcular(a, b) {
-      return a + b;
-    },
-    cambiar(valor) {
-      if (valor === 1) {
-        this.muestra1 = !this.muestra1;
-      } else {
-        this.muestra2 = !this.muestra2;
-      }
-    },
-  },
+    JuegoPage,
+  },  
 };
 </script>
 
