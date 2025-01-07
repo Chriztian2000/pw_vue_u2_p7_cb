@@ -1,14 +1,14 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <Contador
-    encabezado="Primero"
+    encabezado="Primera"
     :valor="calcular(1, 3)"
     :esVerdad="muestra1"
     :valor2="2"
   />
   <hr />
   <Contador
-    encabezado="Segundo"
+    encabezado="Segunda"
     v-bind:valor="calcular(8, 2)"
     :esVerdad="muestra2"
   />
